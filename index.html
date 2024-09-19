@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosón de Rosas Amarillas</title>
+    <title>Ramo de Rosas Amarillas en Movimiento</title>
     <style>
         body {
             display: flex;
@@ -13,31 +13,31 @@
             margin: 0;
             background-color: #f0f0f0;
         }
-        .roson {
-            width: 300px;
-            height: 300px;
+        .ramo {
+            animation: mover 3s ease-in-out infinite;
         }
-        .rosa {
-            animation: girar 20s linear infinite;
-        }
-        @keyframes girar {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        @keyframes mover {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
     </style>
 </head>
 <body>
-    <div class="roson">
-        <svg viewBox="0 0 100 100">
-            <g class="rosa">
-                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" />
-                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" transform="rotate(72 50 50)" />
-                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" transform="rotate(144 50 50)" />
-                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" transform="rotate(216 50 50)" />
-                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" transform="rotate(288 50 50)" />
-            </g>
-            <circle cx="50" cy="50" r="5" fill="#FFD700" />
-        </svg>
-    </div>
+    <svg class="ramo" width="300" height="400" viewBox="0 0 300 400">
+        <g id="tallo">
+            <line x1="150" y1="200" x2="150" y2="380" stroke="green" stroke-width="10"/>
+        </g>
+        <g id="rosas">
+            <circle cx="150" cy="150" r="50" fill="yellow"/>
+            <circle cx="100" cy="180" r="40" fill="yellow"/>
+            <circle cx="200" cy="180" r="40" fill="yellow"/>
+            <circle cx="120" cy="120" r="40" fill="yellow"/>
+            <circle cx="180" cy="120" r="40" fill="yellow"/>
+        </g>
+        <g id="hojas">
+            <path d="M140,300 Q100,280 140,260" fill="green"/>
+            <path d="M160,320 Q200,300 160,280" fill="green"/>
+        </g>
+    </svg>
 </body>
 </html>

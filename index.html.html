@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosón de Rosas Amarillas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .roson {
+            width: 300px;
+            height: 300px;
+        }
+        .rosa {
+            animation: girar 20s linear infinite;
+        }
+        @keyframes girar {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="roson">
+        <svg viewBox="0 0 100 100">
+            <g class="rosa">
+                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" />
+                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" transform="rotate(72 50 50)" />
+                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" transform="rotate(144 50 50)" />
+                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" transform="rotate(216 50 50)" />
+                <path d="M50 10 C60 30 70 30 50 50 C30 30 40 30 50 10" fill="#FFD700" transform="rotate(288 50 50)" />
+            </g>
+            <circle cx="50" cy="50" r="5" fill="#FFD700" />
+        </svg>
+    </div>
+</body>
+</html>
